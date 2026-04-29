@@ -145,7 +145,6 @@ public class demo {
 </html>
 
 ### application.properties:
- server.port=8081
 <img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/0bc79395-5cca-45d7-8ea0-10f40f1c6699" />
 
 
