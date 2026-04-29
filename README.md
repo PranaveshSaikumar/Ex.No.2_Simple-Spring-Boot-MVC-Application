@@ -111,34 +111,41 @@ public class MvcApplication {
 
 ### HomeController.java (Controller):
 
-package com.example.mvc;
+package com.example.springmvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class demo {
 
     @GetMapping("/")
-    public String homePage(Model model) {
-        model.addAttribute("message", "Welcome to Spring Boot MVC!");
-        return "index";  // refers to index.html in templates folder
+    public String test(Model model) {
+        model.addAttribute("greeting", "Welcome to Thymeleaf");
+        return "welcome";
     }
 }
 ### index.html (View – inside src/main/resources/templates/):
 
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>Spring MVC</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-    <h1 th:text="${message}">Default Message</h1>
+<p id = "demo">Original Text</p>
+<button onclick="showMessage()">Click</button>
+<button onclick="changeText()">Change</button>
+<script th:src="@{/script.js}"></script>
+<h1 th:text="${greeting}">welcome</h1>
 </body>
 </html>
 
 ### application.properties:
  server.port=8081
+<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/0bc79395-5cca-45d7-8ea0-10f40f1c6699" />
 
 
